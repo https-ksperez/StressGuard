@@ -211,13 +211,16 @@ class DLToolkit:
             if X_val is not None and y_val is not None:
                 validation_data = (X_val, y_val)
                 
+            # Set default verbose if not in kwargs
+            if 'verbose' not in kwargs:
+                kwargs['verbose'] = 1
+                
             # Train model
             history = model.fit(
                 X_train, y_train,
                 validation_data=validation_data,
                 epochs=epochs,
                 batch_size=batch_size,
-                verbose=1,
                 **kwargs
             )
             
