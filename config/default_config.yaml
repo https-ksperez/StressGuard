@@ -1,0 +1,25 @@
+# StressGuard Configuration
+
+# LLM Model Configuration
+model:
+  name: "microsoft/DialoGPT-medium"  # HuggingFace model or local path
+  max_length: 1000
+  temperature: 0.7
+  top_p: 0.9
+
+# Chatbot Configuration
+chatbot:
+  enable_ml_tools: true
+  enable_dl_tools: true
+  max_conversation_history: 20
+
+# Machine Learning Configuration
+ml:
+  default_test_size: 0.2
+  random_state: 42
+
+# Deep Learning Configuration
+dl:
+  default_epochs: 10
+  default_batch_size: 32
+  use_gpu: true
